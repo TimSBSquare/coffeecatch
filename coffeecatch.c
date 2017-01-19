@@ -326,7 +326,11 @@ coffeecatch_unwind_callback(struct _Unwind_Context* context, void* arg) {
     return _URC_END_OF_STACK;
   } else {
     DEBUG(print("returned _URC_OK\n"));
+#ifdef _URC_OK
     return _URC_OK;
+#else
+    return _URC_NO_REASON;
+#endif
   }
 }
 #endif
