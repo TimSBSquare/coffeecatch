@@ -1356,7 +1356,11 @@ void coffeecatch_get_backtrace_info(void (*fun)(void *arg,
     }
 #endif
     for(i = 0; i < t->frames_size; i++) {
+#ifdef USE_CORKSCREW
       const uintptr_t pc = t->frames[i].absolute_pc;
+#else
+      const uintptr_t pc = t->frames[i];
+#endif
       format_pc_address_cb(pc, fun, arg);
     }
   }
