@@ -19,6 +19,7 @@ gcc:
 	gcc -c -fPIC -O3 -g3 -pthread \
 		-W -Wall -Wextra -Werror -Wno-unused-function \
 		-D_REENTRANT -D_GNU_SOURCE \
+		-DUSE_UNWIND \
 		$(CFILES)
 	gcc -shared -fPIC -O3 -Wl,-O1 -Wl,--no-undefined \
 		-rdynamic -shared -Wl,-soname=libcoffeecatch.so \
