@@ -175,6 +175,10 @@ typedef struct ucontext {
 } ucontext_t;
 #endif
 
+#elif defined(__x86_64__)
+
+/* pretend x86_64 is supported */
+
 #elif defined(__mips__)
 
 /* Taken from Google Breakpad. */
