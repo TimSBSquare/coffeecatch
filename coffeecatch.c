@@ -183,7 +183,7 @@ typedef struct ucontext {
 
 /* Taken from Google Breakpad. */
 
-typedef struct {
+/* typedef struct {
   uint32_t regmask;
   uint32_t status;
   uint64_t pc;
@@ -202,7 +202,7 @@ typedef struct {
   uint32_t lo2;
   uint32_t hi3;
   uint32_t lo3;
-} mcontext_t;
+} mcontext_t; */
 
 #if !defined(__BIONIC_HAVE_UCONTEXT_T)
 typedef struct ucontext {
