@@ -117,13 +117,13 @@ typedef struct ucontext {
 /* Taken from Google Breakpad. */
 
 /* 80-bit floating-point register */
-struct _libc_fpreg {
+/* struct _libc_fpreg {
   unsigned short significand[4];
   unsigned short exponent;
-};
+}; */
 
 /* Simple floating-point state, see FNSTENV instruction */
-struct _libc_fpstate {
+/* struct _libc_fpstate {
   unsigned long cw;
   unsigned long sw;
   unsigned long tag;
@@ -164,7 +164,7 @@ enum {
   REG_EFL,
   REG_UESP,
   REG_SS,
-};
+}; */
 
 #if !defined(__BIONIC_HAVE_UCONTEXT_T)
 typedef struct ucontext {
