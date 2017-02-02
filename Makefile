@@ -31,7 +31,6 @@ test:
 		-W -Wall -Wextra -Werror -Wno-unused-function \
 		-D_REENTRANT \
 		sample.c -o sample.o
-	gcc -fPIC -O3 -Wl,-O1 \
-		-lcoffeecatch -L. \
-		sample.o -o sample
+	gcc -fPIC -O3 -Wl,-O1 -L. \
+		sample.o -lcoffeecatch -o sample
 
